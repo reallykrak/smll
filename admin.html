@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>Admin – ZeroDijitalMarket</title>
+<style>
+body{font-family:sans-serif;background:#090c12;color:#e8eaf0;margin:0;padding:16px;max-width:900px;margin:auto}
+h2{margin:24px 0 8px}table{width:100%;border-collapse:collapse;font-size:.85rem}
+td,th{border-bottom:1px solid #1e2740;padding:8px;text-align:left;word-break:break-all}
+button{background:#1d72e8;color:#fff;border:0;border-radius:6px;padding:6px 10px;cursor:pointer;margin:2px}
+button.r{background:#e63946}input{padding:8px;border-radius:6px;border:1px solid #1e2740;background:#0e1320;color:#e8eaf0}
+</style></head><body>
+<h1>Admin Panel</h1>
+<input id="key" type="password" placeholder="Admin anahtarı"> <button onclick="load()">Giriş / Yenile</button>
+<h2>Bekleyen Havale/EFT</h2><table id="dep"></table>
+<h2>Bekleyen Siparişler</h2><table id="ord"></table>
+<script>
+const $=id=>document.getElementById(id);
+$('key').value=sessionStorage.getItem('zdm_admin')||'';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+async function call(method,body){
+  const r=await fetch('/api/admin',{method,headers:{'x-admin-key':$('key').value,'Content-Type':'application/json'},body:body?JSON.stringify(body):undefined});
+  const j=await r.json(); if(!r.ok) throw new Error(j.error); return j;
+}
+async function load(){
+  try{
+    sessionStorage.setItem('zdm_admin',$('key').value);
+    const {deposits,orders}=await call('GET');
+    $('dep').innerHTML='<tr><th>Kod</th><th>E-posta</th><th>Tutar</th><th></th></tr>'+deposits.map(d=>`<tr><td>${esc(d.oid)}</td><td>${esc(d.email)}</td><td>₺${(d.amount/100).toFixed(2)}</td><td><button onclick="act('deposit','${esc(d.oid)}','approve')">Onayla</button><button class="r" onclick="act('deposit','${esc(d.oid)}','reject')">Reddet</button></td></tr>`).join('');
+    $('ord').innerHTML='<tr><th>#</th><th>E-posta</th><th>Servis / Link</th><th>Adet</th><th></th></tr>'+orders.map(o=>`<tr><td>${o.id}</td><td>${esc(o.email)}</td><td>${esc(o.service_name||'')}<br>${esc(o.link)}</td><td>${o.quantity}</td><td><button onclick="act('order',${o.id},'complete')">Tamamlandı</button><button class="r" onclick="act('order',${o.id},'cancel')">İptal+İade</button></td></tr>`).join('');
+  }catch(e){alert(e.message)}
+}
+async function act(type,ref,action){
+  if(!confirm('Emin misiniz?'))return;
+  try{await call('POST',type==='deposit'?{type,oid:ref,action}:{type,id:ref,action});load();}catch(e){alert(e.message)}
+}
+if($('key').value)load();
+</script></body></html>

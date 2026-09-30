@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZeroMarketTR – Dijital Hizmetler & Sosyal Medya</title>
+<meta name="description" content="ZeroMarketTR: Instagram, TikTok, YouTube ve X için sosyal medya hizmetleri ve SMS onay numaraları.">
+<meta name="theme-color" content="#060608">
+<link rel="icon" href="assets/z-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- İKON SETİ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-tiktok" viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></symbol>
+  <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M2.5 17a24.1 24.1 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.1 24.1 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M4 4h4l12 16h-4z"/><path d="M4 20l6.5-7.5M13.5 10.5 20 4"/></symbol>
+  <symbol id="i-sms" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/><path d="M9.5 8h5M9.5 11h3"/></symbol>
+  <symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.500c0 2.3 1.5 4 3 5.500l7 7Z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3l14 9-14 9z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.7 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.700a1.2 1.2 0 0 1 1.5 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.600a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.600a2 2 0 0 1 0 2.800z"/><path d="M7 7h.01"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 22h18M6 18v-7M10 18v-7M14 18v-7M18 18v-7M12 2 3 7h18z"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+</svg>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<header class="topbar">
+  <div class="container bar">
+    <a class="brand" href="#/"><img src="assets/z-mark.png" alt="ZeroMarketTR"><span>ZeroMarket<em>TR</em></span></a>
+    <nav class="links" id="navLinks">
+      <a href="#/" data-nav="home">Ana Sayfa</a>
+      <a href="#/siparis" data-nav="siparis">Yeni Sipariş</a>
+      <a href="#/servisler" data-nav="servisler">Servisler</a>
+      <a href="#/sms" data-nav="sms">SMS Onay</a>
+      <a href="#/bakiye" data-nav="bakiye">Bakiye Yükle</a>
+      <a href="#/gecmis" data-nav="gecmis">Siparişlerim</a>
+    </nav>
+    <div class="bar-right" id="navRight"></div>
+    <button class="burger" onclick="toggleMenu()" aria-label="Menü"><svg class="ic"><use href="#i-menu"/></svg></button>
+  </div>
+</header>
+
+<main>
+<!-- ANA SAYFA -->
+<section class="view" data-view="home">
+  <div class="container">
+    <div class="hero">
+      <img class="hero-banner" src="assets/banner.jpg" alt="ZeroMarketTR – Dijital Hizmetler & Sosyal Medya">
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#/siparis">Sipariş Ver</a>
+        <a class="btn btn-outline" href="#/sms">SMS Onay Numarası Al</a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Platformlar</h2>
+      <p class="section-sub">Hizmet almak istediğiniz platformu seçin.</p>
+      <div class="platform-grid">
+        <div class="platform-card" onclick="goPlatform('instagram')"><svg class="ic"><use href="#i-instagram"/></svg><b>Instagram</b><small>Takipçi · Beğeni · İzlenme</small></div>
+        <div class="platform-card" onclick="goPlatform('tiktok')"><svg class="ic"><use href="#i-tiktok"/></svg><b>TikTok</b><small>Takipçi · Beğeni · İzlenme</small></div>
+        <div class="platform-card" onclick="goPlatform('youtube')"><svg class="ic"><use href="#i-youtube"/></svg><b>YouTube</b><small>İzlenme · Beğeni · Abone</small></div>
+        <div class="platform-card" onclick="goPlatform('x')"><svg class="ic"><use href="#i-x"/></svg><b>X (Twitter)</b><small>Takipçi · Beğeni</small></div>
+        <div class="platform-card" onclick="location.hash='#/sms'"><svg class="ic"><use href="#i-sms"/></svg><b>SMS Onay</b><small>Sanal numara hizmetleri</small></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Neden ZeroMarketTR?</h2>
+      <p class="section-sub">Hızlı, güvenli ve uygun fiyatlı dijital hizmetler.</p>
+      <div class="feature-grid">
+        <div class="card"><div class="fi"><svg class="ic"><use href="#i-bolt"/></svg></div><h3>Hızlı Teslimat</h3><p>Siparişleriniz otomatik sistemle kısa sürede işleme alınır.</p></div>
+        <div class="card"><div class="fi"><svg class="ic"><use href="#i-shield"/></svg></div><h3>Güvenli Ödeme</h3><p>Kart ödemeleri 3D Secure ile korunur, kart bilgileriniz sitemizde saklanmaz.</p></div>
+        <div class="card"><div class="fi"><svg class="ic"><use href="#i-tag"/></svg></div><h3>Uygun Fiyat</h3><p>Tüm servislerde rekabetçi ve şeffaf fiyatlandırma.</p></div>
+        <div class="card"><div class="fi"><svg class="ic"><use href="#i-headset"/></svg></div><h3>Destek</h3><p>Sorularınız için destek ekibimize WhatsApp veya Telegram üzerinden ulaşın.</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Nasıl Çalışır?</h2>
+      <p class="section-sub">4 adımda siparişinizi oluşturun.</p>
+      <div class="step-grid">
+        <div class="card"><div class="step-num">01</div><h3>Üye Ol</h3><p>E-posta ve şifrenizle hesabınızı oluşturun.</p></div>
+        <div class="card"><div class="step-num">02</div><h3>Bakiye Yükle</h3><p>Kart (3D Secure) veya Havale/EFT ile bakiye yükleyin.</p></div>
+        <div class="card"><div class="step-num">03</div><h3>Sipariş Ver</h3><p>Servisi seçin, linki girin, miktarı belirleyin.</p></div>
+        <div class="card"><div class="step-num">04</div><h3>Takip Et</h3><p>Siparişlerinizi "Siparişlerim" sayfasından izleyin.</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Sık Sorulan Sorular</h2>
+      <p class="section-sub">En çok merak edilenler.</p>
+      <div class="faq">
+        <details><summary>Bakiyem ne kadar sürede yüklenir?</summary><p>Kart ödemelerinde bakiye, ödeme onaylandığı anda otomatik yüklenir. Havale/EFT'de ödeme kontrol edildikten sonra eklenir; açıklama kısmına size verilen kodu yazmanız gerekir.</p></details>
+        <details><summary>Sipariş verirken nelere dikkat etmeliyim?</summary><p>Hesabınızın herkese açık olduğundan ve linkin doğru olduğundan emin olun. Sipariş başladıktan sonra link değiştirilemez.</p></details>
+        <details><summary>SMS Onay nedir?</summary><p>Uygulama ve sitelerde doğrulama için geçici numara alıp gelen SMS kodunu panelden görebileceğiniz hizmettir. Kod gelmezse numarayı iptal edip bakiyenizi iade alabilirsiniz.</p></details>
+        <details><summary>Servislerin sonucu garanti mi?</summary><p>Servis açıklamalarında belirtilen koşullar geçerlidir. Sosyal medya platformlarının kuralları ve işleyişi zamanla değişebilir; ayrıntılar için destek ekibimizle iletişime geçin.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YENİ SİPARİŞ -->
+<section class="view" data-view="siparis">
+  <div class="container">
+    <div class="page-head"><h1>Yeni Sipariş</h1><p>Platformu, kategoriyi ve servisi seçerek siparişinizi oluşturun.</p></div>
+    <div class="two-col">
+      <div class="panel">
+        <div class="tabs" id="orderTabs"></div>
+        <div class="field"><label class="lbl">Kategori</label><select class="input" id="catSelect" onchange="onCatChange()"></select></div>
+        <div class="field"><label class="lbl">Servis</label><select class="input" id="svcSelect" onchange="onSvcChange()"></select></div>
+        <div class="svc-info" id="svcInfo"></div>
+        <div class="field"><label class="lbl">Link</label><input class="input" id="orderLink" type="url" placeholder="https://"></div>
+        <div class="field"><label class="lbl">Miktar</label><input class="input" id="orderQty" type="number" inputmode="numeric" oninput="updateTotal()"><div class="hint" id="qtyHint"></div></div>
+        <div class="price-box"><span>Toplam Tutar</span><b id="orderTotal">₺0.00</b></div>
+        <button class="btn btn-gold btn-block" onclick="handleOrder()">Sipariş Ver</button>
+      </div>
+      <aside class="panel side-balance">
+        <span class="lbl">Bakiyeniz</span>
+        <div class="amt" id="sideBalance">₺0.00</div>
+        <a class="btn btn-outline btn-block" href="#/bakiye">Bakiye Yükle</a>
+        <ul class="side-list">
+          <li><svg class="ic"><use href="#i-check"/></svg>Hesabınızın herkese açık olduğundan emin olun.</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Aynı linke, önceki sipariş bitmeden yeni sipariş vermeyin.</li>
+          <li><svg class="ic"><use href="#i-check"/></svg>Tutar, sipariş anında bakiyenizden düşülür.</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- SERVİSLER -->
+<section class="view" data-view="servisler">
+  <div class="container">
+    <div class="page-head"><h1>Servisler</h1><p>Tüm servisler ve 1000 adet fiyatları.</p></div>
+    <div class="tabs" id="svcTabs"></div>
+    <div class="table-wrap"><table class="tbl"><thead><tr><th>Servis</th><th>Kategori</th><th>1000 Adet</th><th>Min</th><th>Max</th><th></th></tr></thead><tbody id="svcTable"></tbody></table></div>
+  </div>
+</section>
+
+<!-- SMS ONAY -->
+<section class="view" data-view="sms">
+  <div class="container">
+    <div class="page-head"><h1>SMS Onay</h1><p>Doğrulama için geçici numara alın, gelen kodu burada görün. Kod gelmezse iptal edip iade alın.</p></div>
+    <div class="panel sms-active" id="smsActive"></div>
+    <div class="sms-grid" id="smsGrid"></div>
+  </div>
+</section>
+
+<!-- BAKİYE -->
+<section class="view" data-view="bakiye">
+  <div class="container">
+    <div class="page-head"><h1>Bakiye Yükle</h1><p>Mevcut bakiyeniz: <b class="gold" id="topupBalance">₺0.00</b></p></div>
+    <div class="panel" style="max-width:640px">
+      <div id="payForm">
+        <label class="lbl">Tutar</label>
+        <div class="amounts">
+          <div class="amount-btn" onclick="selectAmount(50,this)">₺50</div><div class="amount-btn" onclick="selectAmount(100,this)">₺100</div><div class="amount-btn" onclick="selectAmount(200,this)">₺200</div>
+          <div class="amount-btn" onclick="selectAmount(500,this)">₺500</div><div class="amount-btn" onclick="selectAmount(1000,this)">₺1.000</div><div class="amount-btn" onclick="selectAmount(2000,this)">₺2.000</div>
+        </div>
+        <div class="field"><input class="input" id="customAmount" type="number" inputmode="decimal" placeholder="Özel tutar (₺10 – ₺10.000)" oninput="setCustomAmount(this.value)"></div>
+        <label class="lbl">Ödeme Yöntemi</label>
+        <div class="methods">
+          <div class="method active" data-method="card" onclick="selectPay(this)"><svg class="ic"><use href="#i-card"/></svg><div><b>Kredi / Banka Kartı</b><small>3D Secure ile anında yüklenir</small></div></div>
+          <div class="method" data-method="iban" onclick="selectPay(this)"><svg class="ic"><use href="#i-bank"/></svg><div><b>Havale / EFT</b><small>Açıklama kodu ile onaylanır</small></div></div>
+        </div>
+        <button class="btn btn-gold btn-block" onclick="handleTopup()">Ödemeye Geç</button>
+      </div>
+      <div id="payStage" style="display:none"></div>
+    </div>
+  </div>
+</section>
+
+<!-- GEÇMİŞ -->
+<section class="view" data-view="gecmis">
+  <div class="container">
+    <div class="page-head"><h1>Siparişlerim</h1><p>Sipariş, SMS ve bakiye hareketleriniz.</p></div>
+    <div class="tabs" id="histTabs">
+      <div class="tab active" data-h="orders" onclick="showHist('orders')">Siparişler</div>
+      <div class="tab" data-h="sms" onclick="showHist('sms')">SMS Onay</div>
+      <div class="tab" data-h="deposits" onclick="showHist('deposits')">Bakiye Hareketleri</div>
+    </div>
+    <div class="table-wrap"><table class="tbl"><thead id="histHead"></thead><tbody id="histBody"></tbody></table></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div><a class="brand" href="#/"><img src="assets/z-mark.png" alt=""><span>ZeroMarket<em>TR</em></span></a><p>Dijital hizmetler ve sosyal medya çözümleri. Hızlı · Güvenilir · Uygun.</p></div>
+      <div><h4>Hizmetler</h4><a href="#/siparis">Yeni Sipariş</a><a href="#/servisler">Servis Listesi</a><a href="#/sms">SMS Onay</a></div>
+      <div><h4>Hesap</h4><a href="#/bakiye">Bakiye Yükle</a><a href="#/gecmis">Siparişlerim</a><a href="#" onclick="openModal('auth');switchTab('login');return false">Giriş Yap</a></div>
+      <div><h4>Destek</h4><a href="#" id="waLink" style="display:none" target="_blank" rel="noopener">WhatsApp</a><a href="#" id="tgLink" style="display:none" target="_blank" rel="noopener">Telegram</a><a href="#/">Gizlilik Politikası</a><a href="#/">Kullanım Şartları</a></div>
+    </div>
+    <div class="foot-bottom">© 2026 ZeroMarketTR. Tüm hakları saklıdır.</div>
+  </div>
+</footer>
+
+<!-- GİRİŞ / KAYIT -->
+<div class="modal-overlay" id="authModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('auth')" aria-label="Kapat">&times;</button>
+    <div class="modal-brand"><img src="assets/z-mark.png" alt="ZeroMarketTR"></div>
+    <div class="modal-tabs">
+      <button class="modal-tab active" id="loginTab" onclick="switchTab('login')">Giriş Yap</button>
+      <button class="modal-tab" id="registerTab" onclick="switchTab('register')">Kayıt Ol</button>
+    </div>
+    <div class="form-panel active" id="loginPanel">
+      <div class="field"><label class="lbl">E-posta</label><input class="input" type="email" id="loginEmail" placeholder="ornek@email.com"><div class="err-msg" id="loginEmailErr">Geçerli bir e-posta giriniz.</div></div>
+      <div class="field"><label class="lbl">Şifre</label><input class="input" type="password" id="loginPassword" placeholder="Şifreniz"><div class="err-msg" id="loginPassErr">Şifre en az 6 karakter olmalıdır.</div></div>
+      <div class="err-msg" id="loginGenErr" style="text-align:center;margin-bottom:10px"></div>
+      <button class="btn btn-gold btn-block" onclick="handleLogin()">Giriş Yap</button>
+    </div>
+    <div class="form-panel" id="registerPanel">
+      <div class="field"><label class="lbl">Ad Soyad</label><input class="input" type="text" id="regName" placeholder="Adınız Soyadınız"><div class="err-msg" id="regNameErr">Ad Soyad en az 2 karakter olmalıdır.</div></div>
+      <div class="field"><label class="lbl">E-posta</label><input class="input" type="email" id="regEmail" placeholder="ornek@email.com"><div class="err-msg" id="regEmailErr">Geçerli bir e-posta giriniz.</div></div>
+      <div class="field"><label class="lbl">Şifre</label><input class="input" type="password" id="regPassword" placeholder="En az 8 karakter"><div class="err-msg" id="regPassErr">Şifre en az 8 karakter olmalıdır.</div></div>
+      <div class="err-msg" id="regGenErr" style="text-align:center;margin-bottom:10px"></div>
+      <button class="btn btn-gold btn-block" onclick="handleRegister()">Kayıt Ol</button>
+      <div class="form-foot">Kayıt olarak Kullanım Şartları'nı kabul etmiş olursunuz.</div>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/order.js"></script>
+<script src="js/sms.js"></script>
+<script src="js/balance.js"></script>
+<script src="js/history.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
